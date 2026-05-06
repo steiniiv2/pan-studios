@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PAN Studios — Tonstudio in Berlin. Recording, Mixing, Mastering." />
+  <title>PAN Studios — Tonstudio Berlin</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav">
+    <a href="#top" class="nav__logo">
+      <span class="nav__logo-mark">◐</span>
+      <span class="nav__logo-text">PAN&nbsp;STUDIOS</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#studio">Studio</a>
+      <a href="#technik">Technik</a>
+      <a href="#location">Location</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a href="#kontakt" class="nav__cta">Buchen</a>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <div class="hero__meta">
+      <span>BERLIN — DE</span>
+      <span>EST. 2025</span>
+    </div>
+
+    <h1 class="hero__title">
+      <span class="hero__line">Sound,</span>
+      <span class="hero__line hero__line--italic">aufgenommen</span>
+      <span class="hero__line">in Berlin.</span>
+    </h1>
+
+    <p class="hero__subtitle">
+      PAN Studios ist ein modernes Tonstudio im Herzen Berlins —
+      für Recording, Mixing und Mastering auf höchstem Niveau.
+    </p>
+
+    <div class="hero__actions">
+      <a href="#kontakt" class="btn btn--primary">Session buchen</a>
+      <a href="#studio" class="btn btn--ghost">Studio entdecken ↓</a>
+    </div>
+
+    <!-- Hero Image — TAUSCHBAR -->
+    <div class="hero__image">
+      <img
+        src="images/hero.jpg"
+        alt="PAN Studios Hauptraum"
+        onerror="this.style.display='none'; this.parentNode.classList.add('placeholder');"
+      />
+      <span class="image-tag">images/hero.jpg</span>
+    </div>
+  </section>
+
+  <!-- Studio / Über uns -->
+  <section id="studio" class="section section--studio">
+    <div class="section__header">
+      <span class="section__index">01</span>
+      <h2 class="section__title">Das Studio</h2>
+    </div>
+
+    <div class="studio__grid">
+      <div class="studio__text">
+        <p class="lead">
+          Akustisch optimierte Räume. Kompromisslose Hardware.
+          Eine Umgebung, in der Ideen Klang werden.
+        </p>
+        <p>
+          Unser Studio bietet einen großzügigen Aufnahmeraum, eine
+          akustisch entkoppelte Regie und mehrere Iso-Booths — perfekt
+          für Bands, Solo-Artists, Podcasts und Filmproduktionen.
+        </p>
+        <p>
+          Wir arbeiten analog wie digital. Vom ersten Take bis zum
+          finalen Master — alles unter einem Dach.
+        </p>
+      </div>
+
+      <!-- Studio-Bilder — TAUSCHBAR -->
+      <div class="studio__images">
+        <div class="studio__image studio__image--1">
+          <img src="images/studio-1.jpg" alt="Regieraum"
+               onerror="this.style.display='none'; this.parentNode.classList.add('placeholder');" />
+          <span class="image-tag">images/studio-1.jpg</span>
+        </div>
+        <div class="studio__image studio__image--2">
+          <img src="images/studio-2.jpg" alt="Aufnahmeraum"
+               onerror="this.style.display='none'; this.parentNode.classList.add('placeholder');" />
+          <span class="image-tag">images/studio-2.jpg</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technik -->
+  <section id="technik" class="section section--tech">
+    <div class="section__header">
+      <span class="section__index">02</span>
+      <h2 class="section__title">Technische Übersicht</h2>
+    </div>
+
+    <p class="section__intro">
+      Eine Auswahl unserer wichtigsten Komponenten.
+    </p>
+
+    <div class="tech__grid">
+      <article class="tech-card">
+        <header class="tech-card__head">
+          <span class="tech-card__num">01</span>
+          <h3>Mischpult &amp; Konsole</h3>
+        </header>
+        <ul class="tech-card__list">
+          <li>SSL XL-Desk</li>
+          <li>API 500 Series Lunchbox</li>
+          <li>Custom Patchbay 96-Punkt</li>
+        </ul>
+      </article>
+
+      <article class="tech-card">
+        <header class="tech-card__head">
+          <span class="tech-card__num">02</span>
+          <h3>Mikrofone</h3>
+        </header>
+        <ul class="tech-card__list">
+          <li>Neumann U87 Ai</li>
+          <li>AKG C414 XLS (Stereopaar)</li>
+          <li>Shure SM7B</li>
+          <li>Sennheiser MD421 (Drum-Set)</li>
+        </ul>
+      </article>
+
+      <article class="tech-card">
+        <header class="tech-card__head">
+          <span class="tech-card__num">03</span>
+          <h3>Outboard</h3>
+        </header>
+        <ul class="tech-card__list">
+          <li>Universal Audio 1176</li>
+          <li>Tube-Tech CL 1B</li>
+          <li>Neve 1073 Preamps</li>
+          <li>Lexicon PCM 70 Reverb</li>
+        </ul>
+      </article>
+
+      <article class="tech-card">
+        <header class="tech-card__head">
+          <span class="tech-card__num">04</span>
+          <h3>Monitoring</h3>
+        </header>
+        <ul class="tech-card__list">
+          <li>Genelec 8351B (Main)</li>
+          <li>Yamaha NS-10M</li>
+          <li>Auratone 5C</li>
+        </ul>
+      </article>
+
+      <article class="tech-card">
+        <header class="tech-card__head">
+          <span class="tech-card__num">05</span>
+          <h3>DAW &amp; Wandler</h3>
+        </header>
+        <ul class="tech-card__list">
+          <li>Pro Tools HDX / Logic Pro</li>
+          <li>Antelope Orion 32+ HD</li>
+          <li>Apogee Symphony I/O</li>
+        </ul>
+      </article>
+
+      <article class="tech-card">
+        <header class="tech-card__head">
+          <span class="tech-card__num">06</span>
+          <h3>Instrumente</h3>
+        </header>
+        <ul class="tech-card__list">
+          <li>Yamaha C7 Flügel</li>
+          <li>Vintage Fender Rhodes</li>
+          <li>Moog Subsequent 37</li>
+          <li>Gretsch Drum-Kit</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section id="location" class="section section--location">
+    <div class="section__header">
+      <span class="section__index">03</span>
+      <h2 class="section__title">Location</h2>
+    </div>
+
+    <div class="location__grid">
+      <div class="location__info">
+        <h3>PAN Studios</h3>
+        <address>
+          Musterstraße 12<br />
+          10115 Berlin-Mitte<br />
+          Deutschland
+        </address>
+
+        <dl class="location__details">
+          <div>
+            <dt>Öffnungszeiten</dt>
+            <dd>Mo–Fr · 10:00–22:00<br />Sa · nach Vereinbarung</dd>
+          </div>
+          <div>
+            <dt>Anreise</dt>
+            <dd>U-Bahn: Rosenthaler Platz (U8)<br />Tram: M1, M8</dd>
+          </div>
+          <div>
+            <dt>Parken</dt>
+            <dd>Parkhaus 200&nbsp;m entfernt</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Map / Location-Bild — TAUSCHBAR -->
+      <div class="location__image">
+        <img src="images/location.jpg" alt="Studio von außen / Karte"
+             onerror="this.style.display='none'; this.parentNode.classList.add('placeholder');" />
+        <span class="image-tag">images/location.jpg</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt" class="section section--contact">
+    <div class="section__header">
+      <span class="section__index">04</span>
+      <h2 class="section__title">Kontakt</h2>
+    </div>
+
+    <div class="contact__grid">
+      <a href="mailto:hello@pan-studios.de" class="contact-card">
+        <span class="contact-card__label">Email</span>
+        <span class="contact-card__value">hello@pan-studios.de</span>
+        <span class="contact-card__arrow">→</span>
+      </a>
+
+      <a href="tel:+4930123456789" class="contact-card">
+        <span class="contact-card__label">Telefon</span>
+        <span class="contact-card__value">+49 30 123 456 789</span>
+        <span class="contact-card__arrow">→</span>
+      </a>
+    </div>
+
+    <p class="contact__note">
+      Schreib uns für eine unverbindliche Anfrage —
+      wir antworten in der Regel innerhalb von 24&nbsp;Stunden.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__top">
+      <span class="footer__logo">◐ PAN STUDIOS</span>
+      <span class="footer__tagline">Tonstudio · Berlin</span>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> PAN Studios. Alle Rechte vorbehalten.</span>
+      <span>Made in Berlin</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

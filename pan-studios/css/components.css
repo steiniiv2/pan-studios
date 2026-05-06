@@ -1,0 +1,269 @@
+/* =========================================
+   COMPONENTS — Nav, Buttons, Cards, Placeholders
+   ========================================= */
+
+/* ===== NAVIGATION ===== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem var(--gutter);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  backdrop-filter: blur(12px);
+  background: rgba(208, 188, 168, 0);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.nav.is-scrolled { border-bottom-color: var(--line); }
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
+.nav__logo-mark {
+  font-size: 1.4rem;
+  color: var(--accent);
+  display: inline-block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.nav__logo:hover .nav__logo-mark { transform: rotate(180deg); }
+
+.nav__links {
+  display: flex;
+  gap: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.nav__links a {
+  position: relative;
+  padding: 0.25rem 0;
+  color: var(--fg);
+  transition: color 0.2s ease;
+}
+.nav__links a:hover { color: var(--accent); }
+.nav__links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.nav__links a:hover::after { width: 100%; }
+
+.nav__cta {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  transition: all 0.25s ease;
+}
+.nav__cta:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 1rem 1.6rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: var(--bg);
+  border: 1px solid var(--accent);
+}
+.btn--primary:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--line);
+}
+.btn--ghost:hover {
+  border-color: var(--fg);
+}
+
+/* ===== TECH-CARDS ===== */
+.tech-card {
+  background: var(--bg);
+  padding: var(--space-md);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(122, 154, 90, 0.1);
+}
+.tech-card:hover {
+  background: var(--bg-soft);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(122, 154, 90, 0.2);
+}
+
+.tech-card__head {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--line);
+}
+
+.tech-card__num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+}
+
+.tech-card h3 {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.tech-card__list li {
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  color: var(--fg-muted);
+  border-bottom: 1px dotted var(--line);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.tech-card__list li::before {
+  content: "→";
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+.tech-card__list li:last-child { border-bottom: none; }
+
+/* ===== CONTACT-CARDS ===== */
+.contact-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  border-color: var(--accent);
+  background: var(--bg-soft);
+}
+.contact-card:hover .contact-card__arrow {
+  transform: translateX(8px);
+  color: var(--accent);
+}
+
+.contact-card__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.contact-card__value {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-style: italic;
+}
+
+.contact-card__arrow {
+  font-size: 1.5rem;
+  color: var(--fg-muted);
+  transition: all 0.3s ease;
+}
+
+/* ===== IMAGE-PLACEHOLDER + Tag =====
+   Wenn ein Bild fehlt, wird ein schöner Platzhalter gezeigt.
+   Der image-tag zeigt den Pfad — nur sichtbar bis das Bild da ist. */
+
+.hero__image,
+.studio__image,
+.location__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-tag {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--fg-muted);
+  background: rgba(14, 13, 11, 0.85);
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--line);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.hero__image:hover .image-tag,
+.studio__image:hover .image-tag,
+.location__image:hover .image-tag { opacity: 1; }
+
+/* Wird per JS / onerror aktiviert wenn Bild fehlt */
+.placeholder {
+  background:
+    repeating-linear-gradient(
+      45deg,
+      var(--surface),
+      var(--surface) 10px,
+      var(--bg-soft) 10px,
+      var(--bg-soft) 20px
+    );
+  position: relative;
+}
+.placeholder::before {
+  content: "Bild folgt";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.placeholder .image-tag {
+  opacity: 1;
+}
